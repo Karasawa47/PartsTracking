@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using PartsTracker.DAL;
 using PartsTracker.Models;
+using PartsTracker.ViewModels;
 
 namespace PartsTracker.Controllers
 {
@@ -28,6 +29,7 @@ namespace PartsTracker.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            
             Customer customer = db.Customers.Find(id);
             if (customer == null)
             {

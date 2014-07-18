@@ -13,6 +13,7 @@ namespace PartsTracker.Models
         public int OrderID { get; set; }
         
         [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime PaymentDate { get; set; }
 
         public string PaymentType { get; set; }

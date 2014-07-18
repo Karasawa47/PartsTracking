@@ -13,9 +13,11 @@ namespace PartsTracker.Models
         public int OrderID { get; set; }
         
         public int CustomerID { get; set; }
-        [DataType(DataType.DateTime)]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime Date{get;set;}
-        [DataType(DataType.DateTime)]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime DueDate{get;set;}
         public decimal Total{get;set;}
 

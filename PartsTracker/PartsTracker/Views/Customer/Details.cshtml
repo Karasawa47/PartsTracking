@@ -41,6 +41,20 @@
         <dd>
             @Html.DisplayFor(model => model.Email)
         </dd>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Order Date</th>
+                    <th>Order Amount</th>
+                </tr>
+                @foreach (var item in Model.Orders)
+                {
+                    <tr>
+                        <td> @Html.DisplayFor(modelItem => item.Date) </td>
+                        <td> @Html.DisplayFor(modelItem => item.Total) </td>
+                    </tr> }
+            </table>
+        </dd>
 
     </dl>
 </div>
